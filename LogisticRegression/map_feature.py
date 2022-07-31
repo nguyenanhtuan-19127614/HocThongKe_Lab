@@ -97,6 +97,7 @@ def main():
         if pre[i]==Y[i]:
             accuracy+=1
 
+
     accuracy=accuracy*100/len(Y)
 
     #Precision = TruePositives / (TruePositives + FalsePositives)
@@ -114,7 +115,7 @@ def main():
         'recall': [recall],
         'f1_score': [f1_score]
     })
-    accurData.to_json(path_or_buf='accuracy.json')
+    accurData.to_json(path_or_buf='classification_report.json')
 
 main()
 
